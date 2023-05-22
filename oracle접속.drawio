@@ -1,0 +1,80 @@
+<mxfile host="app.diagrams.net" modified="2023-05-22T05:15:53.699Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="zqt5jBipMqnUMWl8Iek1" version="21.3.2" type="device">
+  <diagram name="페이지-1" id="-XjCXv1CJUJKDrPU0ZgG">
+    <mxGraphModel dx="1373" dy="746" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="YvZfmelxxIvSylGJcBKi-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="YvZfmelxxIvSylGJcBKi-1" target="YvZfmelxxIvSylGJcBKi-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YvZfmelxxIvSylGJcBKi-1" value="관리자(DBA)" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="110" y="168" width="60" height="109" as="geometry" />
+        </mxCell>
+        <mxCell id="YvZfmelxxIvSylGJcBKi-2" value="Storage" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="730" y="181" width="90" height="89" as="geometry" />
+        </mxCell>
+        <mxCell id="YvZfmelxxIvSylGJcBKi-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="YvZfmelxxIvSylGJcBKi-3" target="YvZfmelxxIvSylGJcBKi-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="570" y="223" />
+              <mxPoint x="570" y="226" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YvZfmelxxIvSylGJcBKi-3" value="Sys로그인" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="270" y="200.5" width="120" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="YvZfmelxxIvSylGJcBKi-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="YvZfmelxxIvSylGJcBKi-6" target="YvZfmelxxIvSylGJcBKi-11">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="560" y="308" />
+              <mxPoint x="460" y="308" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YvZfmelxxIvSylGJcBKi-6" value="DB ,User Create&lt;br&gt;DB ,User DROP&lt;br&gt;DB Alter" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="500" y="196" width="120" height="59" as="geometry" />
+        </mxCell>
+        <mxCell id="YvZfmelxxIvSylGJcBKi-9" value="DBL&lt;br&gt;(Data Definition Lang)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="492" y="160" width="130" height="29" as="geometry" />
+        </mxCell>
+        <mxCell id="YvZfmelxxIvSylGJcBKi-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="YvZfmelxxIvSylGJcBKi-11" target="YvZfmelxxIvSylGJcBKi-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YvZfmelxxIvSylGJcBKi-11" value="유저(User)" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="440" y="378" width="40" height="69" as="geometry" />
+        </mxCell>
+        <mxCell id="YvZfmelxxIvSylGJcBKi-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="YvZfmelxxIvSylGJcBKi-13" target="YvZfmelxxIvSylGJcBKi-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YvZfmelxxIvSylGJcBKi-13" value="User 로그인" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="570" y="398" width="103" height="29" as="geometry" />
+        </mxCell>
+        <mxCell id="YvZfmelxxIvSylGJcBKi-17" value="CREATE : INSERT&lt;br&gt;READ : SELECT&lt;br&gt;UPDATE :UPDATE&lt;br&gt;DELETE : DELETE" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="710" y="388" width="120" height="59" as="geometry" />
+        </mxCell>
+        <mxCell id="YvZfmelxxIvSylGJcBKi-18" value="DML&lt;br&gt;(Date Manuplulation Lang)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="690" y="458" width="170" height="19" as="geometry" />
+        </mxCell>
+        <mxCell id="YvZfmelxxIvSylGJcBKi-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="YvZfmelxxIvSylGJcBKi-21" target="YvZfmelxxIvSylGJcBKi-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YvZfmelxxIvSylGJcBKi-21" value="GRANT&lt;br&gt;REVOKE&lt;br&gt;COMMIT&lt;br&gt;ROLL BACK" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="502" y="60" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="YvZfmelxxIvSylGJcBKi-26" value="DCL&lt;br&gt;(Data Control Lang)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="492" y="10" width="143" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="YvZfmelxxIvSylGJcBKi-27" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="440" y="223" as="sourcePoint" />
+            <mxPoint x="500" y="93" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="440" y="93" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
