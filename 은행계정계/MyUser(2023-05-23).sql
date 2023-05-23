@@ -1,0 +1,2 @@
+--여기는 Myuser SCHEME화면
+--여기는 Myuser로 접속한 화면
