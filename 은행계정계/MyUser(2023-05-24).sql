@@ -98,8 +98,7 @@ FROM tbl_acc
 WHERE substr(acNum,0,8) = '20230524';
 
 
-INSERT INTO 
-tbl_acc
+
 
 
 
