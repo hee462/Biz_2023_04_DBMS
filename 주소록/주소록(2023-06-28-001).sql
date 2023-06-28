@@ -7,6 +7,7 @@ CREATE TABLE tbl_address(
     a_tel	VARCHAR2(15)	NOT NULL,	
     a_addr	nVARCHAR2(125)	NOT NULL	
 );
+
 -- 엑셀파일에서 데이터 import
 -- import 한 후에 데이터가 모두 잘 import 되었는지 확인하기
 SELECT * FROM tbl_address;
@@ -85,7 +86,7 @@ SELECT *
 FROM tbl_address
 WHERE a_tel LIKE '090-33%';
 -- a_tel 칼럼의 데이터를 5번째 위치부터 잘라서 보여라
--- SUBSTR() Oracle 의 문자열 자르기 함수'010- ////1234-1234' 5번째 부터 나와라
+-- SUBSTR() Oracle 의 문자열 자르기 함수'*0*1*0*-*////1234-1234' 5번째 부터 나와라
 SELECT SUBSTR(a_tel, 5)
 FROM tbl_address;
 
@@ -93,11 +94,61 @@ FROM tbl_address;
 SELECT SUBSTR(a_tel, 5, 4)
 FROM tbl_address;
 
+-- a_tel 칼럼의 데이터를 5번째 위치부터 4개만 자르고
+-- a_tel 칼럼을 기준으로 오른차순 정렬하여 보여라
+SELECT SUBSTR(a_tel, 5, 4)
+FROM tbl_address
+ORDER BY a_tel;
 
+-- tbl_address 을 열고
+-- a_id<'A0010' 조건검색을 하고 ( selection)
+-- a_id, a_name, a_tel 정보를 projection 
+-- a_tel 오름차순으로 정렬하여 보여라
+-- 이 순서를 꼭 지켜야함
+-- SELECT FROM은 필수 항목
+-- WHERE ORDER BY는 선택항목
+SELECT a_id, a_name, a_tel
+FROM tbl_address
+WHERE a_id<'A0010'
+ORDER BY a_tel;
 
+-- 아래의 두 SELECTION 명령은 같은 결과를 보여준다
+-- 많은 양의 데이터중에서 SELECTION 을 수행할때 
+-- LIKE 키워드를 사용한 WHERE절은 매우느리게 작동한다.
+-- *******상황에 따라 적절한 사용을 하자********
+-- 전화번호 앞에서 6글자를 잘라서 전화번호가 090-33으로 시작되는 데이터 Selection
+SELECT *
+FROM tbl_address
+WHERE SUBSTR(a_tel,1,6) ='090-33';
 
+-- 전화번호 6글자가 090-33으로 시작되는 데이터 SELECION
+-- LIKE 문은 속도가 젤 느림 그래서 위에있는 코드를 사용함
+SELECT *
+FROM tbl_address
+WHERE a_tel LIKE '090-33%';
 
+-- ID 값이 A0010 ~ A0020 인 데이터만 SELECTION 하라
+SELECT *
+FROM tbl_address
+WHERE a_id >= 'A0010' AND a_id<='A0020';
+/*
+SQL 에서 WHERE 등 조건을 부여하여 SELECTION을 할때
+특히 다중조건을 부여할때,
+조건문의 순서에 따라 SELECT 결과의 효율이 달라질 수 있다
+조금더 깊이 생각하여 효과적인 SQL문을 사용하자
 
+*/
+-- 갯수 추출후 조건검색하는것이 더 효율적
+-- 범위 검색 -> 조건검색
+SELECT *
+FROM tbl_address
+WHERE a_id >= 'A0100' AND a_id<='A0200' AND a_tel LIKE '090-33%';
+
+-- 199개 데이터에서 번호 검색후 범위검색
+-- 조건검색 -> 범위검색
+SELECT *
+FROM tbl_address
+WHERE a_tel LIKE '090-33%' AND a_id<='A0010' AND a_id<='A0020';
 
 
 
