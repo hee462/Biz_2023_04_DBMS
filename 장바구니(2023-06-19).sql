@@ -94,6 +94,6 @@ buName = buName
 buTel =	buTel
 buAddr = buAddr
 
- 
+SELECT * FROM tbl_iolist;
  
  
