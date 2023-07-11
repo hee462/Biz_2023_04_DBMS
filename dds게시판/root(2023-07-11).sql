@@ -53,6 +53,53 @@ tel varchar(20)
 
 -- tbl_bbs로 부터 user 정보 정규하로 분해하기
 insert into tbl_user(username ,nickname)
-values('hee462@hee462.com' ,'내멋으로');
+values('callor@callor.com' ,'내멋으로');
 
 desc tbl_user;
+
+insert into tbl_user(username,nickname,tel)
+values('hong','홍길동','090-1111-1111');
+
+insert into tbl_user(username,nickname,tel)
+values('lee','이몽룡','090-2222-2222');
+
+insert into tbl_user(username,nickname,tel)
+values('seoung','성춘향','090-3333-3333');
+
+select * from tbl_bbs;
+
+alter table tbl_bbs
+add constraint F_user
+foreign key(b_username) references tbl_user(username);
+-- 이 아이디가 있어야만 연결됨
+select b_username
+from tbl_bbs
+group by b_username;
+-- FK 설정이 되면
+-- 두 table 간에 Insert, update ,delete 에서 이상현상을  방지하여 참조무결성 관계를 유지한다
+insert into tbl_bbs(b_username, b_nickname)
+values( 'aaa' ,'임꺽정');
+
+desc tbl_bbs;
+select 
+	B.b_seq,
+	B.b_pseq,
+	B.b_date,
+	B.b_time,
+	B.b_username,
+    U.nickname,
+	B.b_subject,
+	B.b_content,
+	B.b_count,
+	B.b_update
+from tbl_bbs B,tbl_user U 
+where B.b_username = U.username
+
+
+
+
+
+
+
+
+
